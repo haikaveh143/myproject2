@@ -2,3 +2,6 @@
 .vs/
 writable/debugbar/
 writable/logs/
+public/uploads/avatars/*
+!public/uploads/avatars/placeholder.svg
+writable/session/
