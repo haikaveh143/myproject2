@@ -21,6 +21,12 @@
         <div><?= esc($errors['avatar'] ?? '') ?></div><br>
     <?php endif; ?>
 
+    <?php if (! $user): ?>
+    <label>Password</label><br>
+    <input type="password" name="password">
+    <div><?= esc($errors['password'] ?? '') ?></div><br>
+<?php endif; ?>
+
     <button type="submit">Save User</button>
     <a href="<?= site_url('users') ?>">Cancel</a>
 </form>

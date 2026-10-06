@@ -37,9 +37,12 @@
 
     <h1>Customer List</h1>
 
-    <p>
-        <a href="<?= site_url('customers/new') ?>">Add New Customer</a>
-    </p>
+<p>
+    <a href="<?= site_url('customers') ?>">Customer Accounts</a> |
+    <a href="<?= site_url('users') ?>">User Accounts</a> |
+    <a href="<?= site_url('customers/new') ?>">Add New Customer</a> |
+    <a href="<?= site_url('logout') ?>">Logout</a>
+</p>
 
     <table>
         <thead>

@@ -44,6 +44,10 @@ class Users extends BaseController
 
         $this->userModel->insert([
             'username'   => $this->request->getPost('username'),
+            'password' => password_hash(
+             $this->request->getPost('password'),
+             PASSWORD_DEFAULT
+        ),
             'full_name'  => $this->request->getPost('full_name'),
             'created_at' => date('Y-m-d H:i:s'),
         ]);
@@ -75,6 +79,7 @@ class Users extends BaseController
 
         $rules = [
             'username'  => 'required',
+            'password'  => 'required|min_length[8]',
             'full_name' => 'required',
         ];
 
